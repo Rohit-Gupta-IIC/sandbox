@@ -22,6 +22,10 @@ services:
       - 4001:4001
       - 4002:4002
       - 9392:9392
+    volumes:
+      - type: bind
+        source: ../pyteal-course
+        target: /data
 
   indexer:
     container_name: "algorand-sandbox-indexer"
